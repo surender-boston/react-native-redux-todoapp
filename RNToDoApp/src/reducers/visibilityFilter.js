@@ -1,6 +1,6 @@
 
 
-const visibilityFilter = (state='SHOW_ALL_TODOS',action) => {
+const visibilityFilter = (state='SHOW_ALL',action) => {
     return state
 }
 

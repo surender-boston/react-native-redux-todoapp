@@ -1,3 +1,4 @@
+import { ADD_TODO,TOGGLE_TODO,SHOW_ALL,SHOW_COMPLETE } from "../actions/actionTypes";
 
 let nextId = 0
 const todos = (state = [],action) => {
@@ -24,6 +25,10 @@ const todos = (state = [],action) => {
                 }
             })
             return state
+        case SHOW_COMPLETE:
+            return state.filter((todo)=>{
+                return todo.completed === true
+            })
         default:
             return state
             break;

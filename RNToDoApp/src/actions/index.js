@@ -1,4 +1,4 @@
-import { ADD_TODO,TOGGLE_TODO } from "./actionTypes";
+import { ADD_TODO,TOGGLE_TODO,SHOW_ALL,SHOW_COMPLETE,SHOW_INCOMPLETE } from "./actionTypes";
 
 let nextId = 0
 export const addTodo = (text) => {
@@ -16,3 +16,22 @@ export const toggleToDo = (id) => {
     })
 }
 
+export const showAllTodos = () => {
+    console.log('show all todos action');
+    
+    return({
+        type:SHOW_ALL
+    })
+}
+
+export const showCompleteTodos = () => {
+    return ({
+        type:SHOW_COMPLETE
+    })
+}
+
+export const showIncompleteTodos = () => {
+    return ({
+        type:SHOW_INCOMPLETE
+    })
+}
