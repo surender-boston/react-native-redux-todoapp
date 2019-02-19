@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View ,TextInput,TouchableOpacity} from 'react-native';
 import { Ionicons } from "@expo/vector-icons";
 import { connect } from "react-redux";
+import { addTodo } from "../actions/index";
 
 class AddToDo extends React.Component {
 
@@ -17,7 +18,7 @@ class AddToDo extends React.Component {
 
     addToDo = (text) => {
         //update redux store
-        this.props.dispatch({type:'ADD_TODO',text})
+        this.props.dispatch(addTodo(text))
         this.setState({
             text:''
         })
